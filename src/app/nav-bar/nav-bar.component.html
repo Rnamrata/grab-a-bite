@@ -1,0 +1,11 @@
+<nav class="header" *ngIf="!hideNavBar">
+  <div class="logo">
+    <img src="../../assets/logo/logo.svg" class="logo-icon" (click)="goToHome()">
+  </div>
+  <div class="title">Grab a Bite</div>
+  <div class="contact">
+    <img src="../../assets/icon/header/contact-us.svg" class="contact-icon">
+  </div>
+  <div class="line"></div>
+  <div (click)="goToLogin()" class="sign-in">Sign In</div>
+</nav>
