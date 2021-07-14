@@ -7,11 +7,14 @@ import {Observable} from 'rxjs';
 export class AuthenticationService {
 
   loggedIn = false;
+  user = {
+    userName: ''
+  };
 
   constructor() { }
 
   loginAsGuest(): boolean {
-    if (this.loggedIn == false) {
+    if (!this.loggedIn) {
       this.loggedIn = true;
       localStorage.setItem('loggedIn', String(true));
     }

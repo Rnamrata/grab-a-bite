@@ -7,5 +7,6 @@
     <img src="../../assets/icon/header/contact-us.svg" class="contact-icon">
   </div>
   <div class="line"></div>
-  <div (click)="goToLogin()" class="sign-in">Sign In</div>
+  <div *ngIf="user == ''" (click)="goToLogin()" class="sign-in">Sign In</div>
+  <div *ngIf="user != ''" class="user">{{user}}</div>
 </nav>

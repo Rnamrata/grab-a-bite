@@ -8,6 +8,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LoginComponent } from './login/login.component';
 import { LoginModule } from './login/login.module';
 import { HomeComponent } from './home/home.component';
+import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    LoginModule
+    LoginModule,
+    ShowHidePasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

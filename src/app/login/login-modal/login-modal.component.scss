@@ -49,6 +49,12 @@
       display: block;
     }
 
+    .continue-button {
+      margin-top: 15%;
+      background: $color-chili-red;
+      outline: none;
+      color: $color-white;
+    }
     .guest-button {
       margin-top: 15%;
       background: $color-white;
