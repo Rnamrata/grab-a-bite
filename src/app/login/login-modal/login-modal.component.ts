@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AuthenticationService} from '../../../service/authentication.service';
 import {Router} from '@angular/router';
 import {ShowHideService} from 'ngx-show-hide-password';
+import { untilDestroyed } from 'ngx-take-until-destroy';
 
 @Component({
   selector: 'app-login-modal',
@@ -21,6 +22,7 @@ export class LoginModalComponent implements OnInit {
   ) {
     this.showHideService
       .getObservable('password1')
+      .pipe(untilDestroyed(this))
       .subscribe(show => {
         this.isHidden = !show;
       });
@@ -42,7 +44,6 @@ export class LoginModalComponent implements OnInit {
   }
 
   redirect(): void {
-    console.log(this.loggedIn);
     if (this.loggedIn) {
       this.router.navigate(['home']);
     }
